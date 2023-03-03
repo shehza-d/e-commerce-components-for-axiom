@@ -1,22 +1,22 @@
 import { ImgGridType } from "../../../types/types";
 
 export default function Img(props: { data: ImgGridType }) {
-  // export default function Img({ name, imgUrl }: ImgGridType) {
-  console.log("Image", props.data.grow);
+  // export default function Img({ data }: ImgGridType) {
   return (
     <a
-      href="#"
+      href={`www.facebook.com/${props.data.name}`}
       className={`group flex ${
-        props.data.grow ? "flex-grow-[2]" : "flex-grow"
+        props.data.grow ? "w-80 flex-grow-[2]" : "w-32 flex-grow"
       }`}
     >
       <div
-        className="bdr2 flex h-[300px] w-full items-end bg-cover bg-center  bg-no-repeat p-3"
+        className="flex h-[270px] w-full items-end bg-cover bg-center bg-no-repeat  p-3 sm:h-[300px]"
         style={{
           backgroundImage: `url(${props.data.imgUrl})`,
         }}
       >
-        <h4 className="group font-bold capitalize text-slate-100 group-hover:underline">
+        <h4 className="uddd relative inline-block font-bold capitalize text-slate-100 underline-offset-4 transition-all duration-300 group-hover:-translate-y-8 group-hover:after:left-0  group-hover:after:w-full">
+          {/* <h4 className="un relative inline-block transition-all duration-300 group-hover:-translate-y-8"> */}
           {props.data.name}
         </h4>
       </div>
