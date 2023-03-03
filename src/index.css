@@ -28,6 +28,14 @@ body {
   border: 2px solid yellow;
 }
 
+/* for left to right underline */
+/* relative inline-block  in parent*/
+@layer {
+  .S_Underline {
+    @apply after:absolute after:right-0 after:bottom-0 after:h-1 after:w-0 after:bg-slate-100 after:transition-all after:duration-500 after:content-[''];
+  }
+}
+
 /* position: absolute;
 content: "";
 background: black;
@@ -36,55 +44,7 @@ right: 0;
 height: 2px;
 width: 0%;
 transition: 300ms ease-in-out; */
-
-/* for left to right underline */
-/* relative inline-block  in parent*/
-@layer {
-  .uddd {
-    @apply after:absolute after:right-0 after:bottom-0 after:h-1 after:w-0 after:bg-slate-100 after:transition-all  after:duration-500 after:content-[''];
-  }
-}
-
-.un:hover:after {
-  width: 100%;
-}
-
-.un:not(:hover):after {
-  right: 0;
-  left: auto;
-}
 /* 
-app.css
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

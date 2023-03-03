@@ -1,10 +1,7 @@
-// import { data } from "./data/ImgGirdData";
 import { ImgGridType } from "../../../types/types";
 import Img from "./Img";
 
 export default function ImgGrid1(props: { data: ImgGridType[] }) {
-  // console.log(data)
-
   return (
     <>
       <section className="m-7 min-h-screen">

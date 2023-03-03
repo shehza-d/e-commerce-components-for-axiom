@@ -15,8 +15,7 @@ export default function Img(props: { data: ImgGridType }) {
           backgroundImage: `url(${props.data.imgUrl})`,
         }}
       >
-        <h4 className="uddd relative inline-block font-bold capitalize text-slate-100 underline-offset-4 transition-all duration-300 group-hover:-translate-y-8 group-hover:after:left-0  group-hover:after:w-full">
-          {/* <h4 className="un relative inline-block transition-all duration-300 group-hover:-translate-y-8"> */}
+        <h4 className="S_Underline relative inline-block font-bold capitalize text-slate-100 underline-offset-4 transition-all duration-300 group-hover:-translate-y-8 group-hover:after:left-0  group-hover:after:w-full">
           {props.data.name}
         </h4>
       </div>
