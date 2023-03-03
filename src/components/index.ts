@@ -1,5 +1,5 @@
-import ImgGrid1 from "./ImgGrid1";
-import BuyNow2 from "./BuyNow2";
-import ImgCards3 from "./ImgCards3";
+import ImgGrid1 from "./ImgGird1/index";
+import BuyNow2 from "./BuyNow2/index";
+import ImgCards3 from "./ImgCard3/index";
 
 export { ImgGrid1, BuyNow2, ImgCards3 };
