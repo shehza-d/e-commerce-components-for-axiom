@@ -7,10 +7,12 @@ export default function BuyNow2() {
       <div className="slider bdr flex-1"></div>
 
       <div className="details  flex-1">
-        <h2 className="">Chambray Button Down</h2>
-        <span className="block">$68</span>
+        <h2 className="text-4xl font-bold">Chambray Button Down</h2>
+        <span className="block divide-y divide-gray-300  py-6 text-2xl font-light">
+          $68
+        </span>
 
-        <h6>SIZE</h6>
+        <h6 className="font-semibold tracking-widest">SIZE</h6>
         <SizeUL />
         {/*  */}
         <div className="btns flex flex-col gap-2">
@@ -40,13 +42,15 @@ export default function BuyNow2() {
             Features an understated plus-sign pattern.
           </p>
         </div>
-        <ul className="list-inside list-disc py-2 px-8">
+        <ul className="list-inside list-disc py-2 px-8 font-light">
           <li> All-over print </li>
           <li> Full button down placket and collar </li>
           <li> Front left patch pocket </li>
           <li> Natural corozo buttons throughout </li>
           <li> Curved hemline</li>
         </ul>
+
+        <select name="" id=""></select>
       </div>
     </section>
   );
