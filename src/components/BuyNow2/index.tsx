@@ -28,11 +28,11 @@ export default function BuyNow2(props: { data: BuyNowData }) {
             <span> Add to cart</span>
             <MdOutlineArrowRightAlt className="hidden text-4xl text-gray-800 group-hover:inline group-hover:translate-x-5" />
           </button>
-          <button className="group h-12 bg-gray-900 text-lg font-bold text-white transition-all  delay-300 duration-300">
+          <button className="h-12 bg-gray-900 text-lg font-bold text-gray-100">
             Buy it now
           </button>
         </div>
-        <div className="my-6 text-base font-normal">
+        <div className="my-6 text-base font-normal text-slate-700">
           <p className="italic">
             This is a demonstration store. You can purchase products like this
             from{" "}
@@ -73,12 +73,39 @@ export default function BuyNow2(props: { data: BuyNowData }) {
               ASK A QUESTION
             </h6>
           </summary>
-          <form className="">
-            <p className="text-slate-700">
-              This site is protected by reCAPTCHA and the Google Privacy Policy
-              and Terms of Service apply.
-            </p>
+          <form className="mt-3 flex flex-col gap-3">
+            <label htmlFor="userName">Name</label>
+            <input
+              id="userName"
+              type="text "
+              className="border p-2 outline-none focus:border-gray-900"
+            />
+
+            <label htmlFor="userEmail">Email</label>
+            <input
+              id="userEmail"
+              type="e "
+              className="border p-2 outline-none focus:border-gray-900"
+            />
+
+            <label htmlFor="userMessage">Message</label>
+            <textarea
+              id="userMessage"
+              rows={4}
+              className="border p-2 outline-none focus:border-gray-900"
+            />
+
+            <button
+              className="my-6 h-11  bg-gray-900  px-8 text-lg font-bold text-gray-100"
+              type="submit"
+            >
+              Send
+            </button>
           </form>
+          <p className="text-gray-700">
+            This site is protected by reCAPTCHA and the Google Privacy Policy
+            and Terms of Service apply.
+          </p>
         </details>
       </div>
     </section>
