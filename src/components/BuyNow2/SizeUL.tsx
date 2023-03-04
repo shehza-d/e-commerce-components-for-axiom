@@ -1,6 +1,6 @@
 export default function SizeUL() {
   return (
-    <ul className="flex gap-2 ">
+    <ul className="mb-8 mt-2 flex gap-2">
       <li>
         <input
           type="radio"
