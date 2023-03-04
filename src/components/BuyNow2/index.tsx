@@ -6,7 +6,12 @@ import { BuyNowData } from "../../../types/types";
 export default function BuyNow2(props: { data: BuyNowData }) {
   return (
     <section className="m-5 flex gap-10 md:m-10">
-      <div className="slider bdr flex-1"></div>
+      <div className="slider bdr sticky top-0 h-screen flex-1">
+        <img
+          src="https://res.cloudinary.com/deh1sqok6/image/upload/v1677856363/axiom-1/ap2jzysxtaohbxqmcwfs.webp"
+          alt=""
+        />
+      </div>
 
       <div className="details  flex-1">
         <h2 className="text-4xl font-bold">Chambray Button Down</h2>
@@ -52,13 +57,28 @@ export default function BuyNow2(props: { data: BuyNowData }) {
           <li> Curved hemline</li>
         </ul>
 
-        <details className="">
+        <details className="border-b-2 pb-4">
           <summary>
-            <h6>SIZE CHART</h6>
+            <h6 className="mt-8 mb-2 font-semibold tracking-widest">
+              SIZE CHART
+            </h6>
           </summary>
           {/* <div className="flex	w-full table-auto">*/}
           <Table data={props.data.TableData} />
           {/*     </div> */}
+        </details>
+        <details className="border-b-2 pb-4">
+          <summary>
+            <h6 className="mt-8 mb-2 font-semibold tracking-widest">
+              ASK A QUESTION
+            </h6>
+          </summary>
+          <form className="">
+            <p className="text-slate-700">
+              This site is protected by reCAPTCHA and the Google Privacy Policy
+              and Terms of Service apply.
+            </p>
+          </form>
         </details>
       </div>
     </section>
