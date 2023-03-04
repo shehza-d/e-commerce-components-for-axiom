@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+* {
+  font-family: "Outfit", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -32,7 +34,10 @@ body {
 /* relative inline-block  in parent*/
 @layer {
   .S_Underline {
-    @apply after:absolute after:right-0 after:bottom-0 after:h-1 after:w-0 after:bg-slate-100 after:transition-all after:duration-500 after:content-[''];
+    @apply after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-slate-100 after:transition-all after:duration-500 after:content-[''];
+  }
+  .S_Underline-black {
+    @apply after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-slate-800 after:transition-all after:duration-300 after:content-[''];
   }
 }
 
