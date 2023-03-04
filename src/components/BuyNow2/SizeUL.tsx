@@ -12,7 +12,7 @@ export default function SizeUL() {
         />
         <label
           htmlFor="size-small"
-          className="inline-flex h-10 w-10 cursor-pointer items-center justify-center border border-gray-300 bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-4 peer-checked:border-gray-900 peer-checked:text-slate-800"
+          className="inline-flex h-10 w-10 cursor-pointer items-center justify-center border border-gray-300 bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:text-slate-800 peer-checked:ring-2 peer-checked:ring-gray-900"
         >
           <span className="text-lg font-light">S</span>
         </label>
@@ -27,7 +27,7 @@ export default function SizeUL() {
         />
         <label
           htmlFor="size-medium"
-          className="inline-flex h-10 w-10 cursor-pointer items-center justify-center border border-gray-300 bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-4 peer-checked:border-gray-900 peer-checked:text-slate-800"
+          className="inline-flex h-10 w-10 cursor-pointer items-center justify-center border border-gray-300 bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:text-slate-800 peer-checked:ring-2 peer-checked:ring-gray-900"
         >
           <span className=" text-lg font-light">M</span>
         </label>
@@ -42,7 +42,7 @@ export default function SizeUL() {
         />
         <label
           htmlFor="size-large"
-          className="inline-flex h-10 w-10 cursor-pointer items-center justify-center border border-gray-300 bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-4 peer-checked:border-gray-900 peer-checked:text-slate-800"
+          className="inline-flex h-10 w-10 cursor-pointer items-center justify-center border border-gray-300 bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:text-slate-800 peer-checked:ring-2 peer-checked:ring-gray-900"
         >
           <span className=" text-lg font-light">L</span>
         </label>
@@ -57,7 +57,7 @@ export default function SizeUL() {
         />
         <label
           htmlFor="size-extra-large"
-          className="inline-flex h-10 w-10 cursor-pointer items-center justify-center border border-gray-300 bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-4 peer-checked:border-gray-900 peer-checked:text-slate-800"
+          className="inline-flex h-10 w-10 cursor-pointer items-center justify-center border border-gray-300 bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:text-slate-800 peer-checked:ring-2 peer-checked:ring-gray-900"
         >
           <span className=" text-lg font-light">XL</span>
         </label>
