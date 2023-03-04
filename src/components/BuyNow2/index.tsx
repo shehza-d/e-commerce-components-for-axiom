@@ -1,7 +1,9 @@
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import SizeUL from "./SizeUL";
+import Table from "./Table";
+import { BuyNowData } from "../../../types/types";
 
-export default function BuyNow2() {
+export default function BuyNow2(props: { data: BuyNowData }) {
   return (
     <section className="m-5 flex gap-10 md:m-10">
       <div className="slider bdr flex-1"></div>
@@ -50,7 +52,14 @@ export default function BuyNow2() {
           <li> Curved hemline</li>
         </ul>
 
-        <select name="" id=""></select>
+        <details className="">
+          <summary>
+            <h6>SIZE CHART</h6>
+          </summary>
+          {/* <div className="flex	w-full table-auto">*/}
+          <Table data={props.data.TableData} />
+          {/*     </div> */}
+        </details>
       </div>
     </section>
   );
