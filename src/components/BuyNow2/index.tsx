@@ -98,15 +98,27 @@ export default function BuyNow2(props: { data: BuyNowData }) {
             />
 
             <button
-              className="my-6 h-11 bg-gray-900  px-8 text-lg font-bold text-gray-100"
+              className="my-6 h-11 w-28  bg-gray-900 px-8 text-lg font-bold text-gray-100"
               type="submit"
             >
               Send
             </button>
           </form>
           <p className="text-gray-700">
-            This site is protected by reCAPTCHA and the Google Privacy Policy
-            and Terms of Service apply.
+            This site is protected by reCAPTCHA and the Google{" "}
+            <a
+              className="S_Underline-black relative inline-block underline decoration-slate-300 underline-offset-[4.5px] hover:after:left-0 hover:after:w-full"
+              href="https://policies.google.com/privacy"
+            >
+              Privacy Policy
+            </a>{" "}
+            and{" "}
+            <a
+              className="S_Underline-black relative inline-block underline decoration-slate-300 underline-offset-[4.5px] hover:after:left-0 hover:after:w-full"
+              href="https://policies.google.com/terms"
+            >
+              Terms of Service apply.
+            </a>
           </p>
         </details>
       </div>
