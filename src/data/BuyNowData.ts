@@ -7,7 +7,7 @@ export const data = {
     xl: 80,
   },
   details:
-    "This is a demonstration store. You can purchase products like this from <a href='http://'>United By Blue</a><br>Like your well-worn pair of jeans in short-sleeve button down form. Features an understated plus-sign pattern.",
+    "This is a demonstration store. You can purchase products like this from <a href='https://unitedbyblue.com/'>United By Blue</a><br>Like your well-worn pair of jeans in short-sleeve button down form. Features an understated plus-sign pattern.",
 
   // points:
   imgUrl:
