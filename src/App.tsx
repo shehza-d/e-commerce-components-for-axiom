@@ -3,10 +3,10 @@ import { BuyNow2, ImgGrid1, ImgCards3 } from "./components";
 
 function App(): JSX.Element {
   return (
-    <main className="App">
+    <main className="bg-white">
       <ImgGrid1 data={ImgGridData} />
       <BuyNow2 data={BuyNowData} />
-      <ImgCards3 />
+      <ImgCards3 data={ImgCardData} />
     </main>
   );
 }

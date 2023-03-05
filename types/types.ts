@@ -30,3 +30,11 @@ export type SizeTableType = {
   uk: number;
   europe: number;
 }[];
+
+//3
+export type ImgCardType = {
+  img_url: string;
+  date: string;
+  title: string;
+  link: string;
+};

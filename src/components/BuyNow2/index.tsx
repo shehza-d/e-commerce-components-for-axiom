@@ -5,7 +5,7 @@ import { BuyNowData } from "../../../types/types";
 
 export default function BuyNow2(props: { data: BuyNowData }) {
   return (
-    <section className="m-5 flex gap-10 md:m-10">
+    <section className="m-5 flex gap-10  md:m-10">
       <div className="slider bdr sticky top-0 h-screen flex-1">
         <img
           src="https://res.cloudinary.com/deh1sqok6/image/upload/v1677856363/axiom-1/ap2jzysxtaohbxqmcwfs.webp"
@@ -24,11 +24,11 @@ export default function BuyNow2(props: { data: BuyNowData }) {
         {/*  */}
         <div className="btns flex flex-col gap-2">
           <button className="group flex h-12 items-center justify-around border-2 border-slate-800 bg-transparent text-lg font-bold text-slate-800 transition-all delay-300 duration-1000">
-            <div></div>
-            <span className="group-hover: group-hover: transition-all duration-300 group-hover:-translate-x-3">
+            <div className="w-9"></div>
+            <span className="transition-all duration-300 group-hover:-translate-x-3">
               Add to cart
             </span>
-            <MdOutlineArrowRightAlt className="relative -right-full text-4xl text-gray-800 transition-all duration-300 group-hover:right-5  group-hover:translate-x-5" />
+            <MdOutlineArrowRightAlt className="relative -right-24 -z-20 text-4xl text-gray-800 transition-all duration-300 group-hover:right-7 group-hover:z-10 group-hover:translate-x-5" />
           </button>
           <button className="h-12 bg-gray-900 text-lg font-bold text-gray-100">
             Buy it now
