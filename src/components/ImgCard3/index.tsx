@@ -2,29 +2,23 @@ import { ImgCardType } from "../../../types/types";
 
 export default function ImgCards3(props: { data: ImgCardType[] }) {
   return (
-    <section className="p-8">
+    <section className="p-5 ml:p-8">
       <div className="flex justify-between py-6">
         <h3 className="text-2xl font-bold">From the journal</h3>
         <button className="p-2">View all</button>
       </div>
 
-      <div className="flex gap-8 ">
+      <div className="flex flex-col flex-wrap items-center gap-8 min-[916px]:flex-row">
         {props.data.map((item, i) => (
-          <div className="flex-1" key={i}>
+          <div className="min-w-[250px] flex-1" key={i}>
             <a href={`${item.link}`} className={``}>
-              <div className="overflow-hidden ">
+              <div className="overflow-hidden">
                 <img
-                  className="relative z-10 duration-[1500ms] hover:scale-110"
+                  className="duration-[1500ms] hover:scale-110 hover:brightness-75"
                   src={item.img_url}
                   alt={item.title}
                 />
               </div>
-              {/* <div
-                className="flex aspect-video items-end bg-cover bg-center bg-no-repeat p-3 sm:h-[300px]"
-                style={{
-                  backgroundImage: `url(${item.img_url})`,
-                }}
-              ></div> */}
             </a>
 
             <br />
