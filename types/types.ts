@@ -25,10 +25,11 @@ export type BuyNowData = {
     europe: number;
   }[];
   ImgSliderData: {
-    type: string;
+    type: "photo" | "video";
     imgUrl: string;
   }[];
 };
+
 export type SizeTableType = {
   us: number;
   us_text: string;

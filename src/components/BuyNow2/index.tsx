@@ -8,7 +8,23 @@ import PortableText from "react-portable-text";
 export default function BuyNow2(props: { data: BuyNowData }) {
   return (
     <section className="m-5 flex gap-10  md:m-10">
-      <div className="slider bdr sticky top-0 h-screen flex-1"></div>
+      <div className="slider bdr sticky top-0 h-screen flex-1">
+        {/* {props.data.ImgSliderData.map((item,i)=>{
+          if()
+        })} */}
+        {props.data.ImgSliderData.map((item, i) => {
+          if (item.type === "photo") {
+            return (
+              <img
+                src={item.imgUrl}
+                width={70}
+                height={70}
+                alt="shop item for sell"
+              />
+            );
+          }
+        })}
+      </div>
 
       <div className="details  flex-1">
         <h2 className="text-4xl font-bold">{props.data.title}</h2>
@@ -65,11 +81,6 @@ export default function BuyNow2(props: { data: BuyNowData }) {
           {props.data.UlPoints.map((item, i) => (
             <li key={i}>{item.li}</li>
           ))}
-          {/* <li> All-over print </li> */}
-          {/* <li> Full button down placket and collar </li> */}
-          {/* <li> Front left patch pocket </li> */}
-          {/* <li> Natural corozo buttons throughout </li> */}
-          {/* <li> Curved hemline</li> */}
         </ul>
 
         <details className="border-b-2 pb-4 transition-all delay-300 duration-300">
@@ -78,9 +89,7 @@ export default function BuyNow2(props: { data: BuyNowData }) {
               SIZE CHART
             </h6>
           </summary>
-          {/* <div className="flex	w-full table-auto">*/}
           <Table data={props.data.TableData} />
-          {/*     </div> */}
         </details>
         <details className="border-b-2 pb-4">
           <summary>
