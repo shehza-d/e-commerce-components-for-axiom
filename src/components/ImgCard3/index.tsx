@@ -36,7 +36,7 @@ export default function ImgCards3(props: { data: ImgCardType[] }) {
         ))}
       </div>
 
-      <div className="h-screen"></div>
+      <div className="h-[50vh]"></div>
     </section>
   );
 }

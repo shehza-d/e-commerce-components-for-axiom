@@ -2,23 +2,19 @@ import { MdOutlineArrowRightAlt } from "react-icons/md";
 import SizeUL from "./SizeUL";
 import Table from "./Table";
 import { BuyNowData } from "../../../types/types";
+import PortableText from "react-portable-text";
 
+// export default function BuyNow2({TableData,ImgSliderData,UlPoints,details,price,title}:BuyNowData) {
 export default function BuyNow2(props: { data: BuyNowData }) {
   return (
     <section className="m-5 flex gap-10  md:m-10">
-      <div className="slider bdr sticky top-0 h-screen flex-1">
-        <img
-          src="https://res.cloudinary.com/deh1sqok6/image/upload/v1677856363/axiom-1/ap2jzysxtaohbxqmcwfs.webp"
-          alt=""
-        />
-      </div>
+      <div className="slider bdr sticky top-0 h-screen flex-1"></div>
 
       <div className="details  flex-1">
-        <h2 className="text-4xl font-bold">Chambray Button Down</h2>
+        <h2 className="text-4xl font-bold">{props.data.title}</h2>
         <span className="block divide-y divide-gray-300  py-6 text-2xl font-light">
-          $68
+          ${props.data.price.m}
         </span>
-
         <h6 className="font-semibold tracking-widest">SIZE</h6>
         <SizeUL />
         {/*  */}
@@ -35,7 +31,21 @@ export default function BuyNow2(props: { data: BuyNowData }) {
           </button>
         </div>
         <div className="my-6 text-base font-normal text-slate-700">
-          <p className="italic">
+          {props.data.details}
+
+          {/*     <PortableText
+               // Pass in block content straight from Sanity.io
+               content={props.data.details}
+               // Optionally override marks, decorators, blocks, etc. in a flat
+               // structure without doing any gymnastics
+               serializers={{
+                 h1: (props) => <h1 style={{ color: "red" }} {...props} />,
+                 li: ({ children }) => <li className="special-list-item">{children}</li>,
+                 someCustomType: YourComponent,
+               }}
+    /> */}
+
+          {/* <p className="italic">
             This is a demonstration store. You can purchase products like this
             from{" "}
             <a
@@ -49,17 +59,20 @@ export default function BuyNow2(props: { data: BuyNowData }) {
           <p className="">
             Like your well-worn pair of jeans in short-sleeve button down form.
             Features an understated plus-sign pattern.
-          </p>
+          </p> */}
         </div>
         <ul className="list-inside list-disc py-2 px-8 font-light">
-          <li> All-over print </li>
-          <li> Full button down placket and collar </li>
-          <li> Front left patch pocket </li>
-          <li> Natural corozo buttons throughout </li>
-          <li> Curved hemline</li>
+          {props.data.UlPoints.map((item, i) => (
+            <li key={i}>{item.li}</li>
+          ))}
+          {/* <li> All-over print </li> */}
+          {/* <li> Full button down placket and collar </li> */}
+          {/* <li> Front left patch pocket </li> */}
+          {/* <li> Natural corozo buttons throughout </li> */}
+          {/* <li> Curved hemline</li> */}
         </ul>
 
-        <details className="border-b-2 pb-4">
+        <details className="border-b-2 pb-4 transition-all delay-300 duration-300">
           <summary>
             <h6 className="mt-8 mb-2 font-semibold tracking-widest">
               SIZE CHART

@@ -15,13 +15,18 @@ export type BuyNowData = {
     xl: number;
   };
   details: string;
-  imgUrl: string;
-  grow: boolean;
+  UlPoints: {
+    li: string;
+  }[];
   TableData: {
     us: number;
     us_text: string;
     uk: number;
     europe: number;
+  }[];
+  ImgSliderData: {
+    type: string;
+    imgUrl: string;
   }[];
 };
 export type SizeTableType = {
