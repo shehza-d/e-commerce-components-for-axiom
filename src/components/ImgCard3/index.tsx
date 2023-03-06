@@ -12,12 +12,19 @@ export default function ImgCards3(props: { data: ImgCardType[] }) {
         {props.data.map((item, i) => (
           <div className="flex-1" key={i}>
             <a href={`${item.link}`} className={``}>
-              <div
+              <div className="overflow-hidden ">
+                <img
+                  className="relative z-10 duration-[1500ms] hover:scale-110"
+                  src={item.img_url}
+                  alt={item.title}
+                />
+              </div>
+              {/* <div
                 className="flex aspect-video items-end bg-cover bg-center bg-no-repeat p-3 sm:h-[300px]"
                 style={{
                   backgroundImage: `url(${item.img_url})`,
                 }}
-              ></div>
+              ></div> */}
             </a>
 
             <br />
@@ -34,7 +41,11 @@ export default function ImgCards3(props: { data: ImgCardType[] }) {
           </div>
         ))}
       </div>
+
       <div className="h-screen"></div>
     </section>
   );
 }
+// <div className="z-5 group-hover:animate-shine absolute -inset-full top-0 block h-full w-1/2 -skew-x-12 transform bg-gradient-to-r from-transparent to-white opacity-40">
+//   special btn
+// </div>
