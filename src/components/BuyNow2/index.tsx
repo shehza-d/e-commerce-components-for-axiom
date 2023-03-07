@@ -3,28 +3,49 @@ import SizeUL from "./SizeUL";
 import Table from "./Table";
 import { BuyNowData } from "../../../types/types";
 import PortableText from "react-portable-text";
+import { useState } from "react";
 
 // export default function BuyNow2({TableData,ImgSliderData,UlPoints,details,price,title}:BuyNowData) {
 export default function BuyNow2(props: { data: BuyNowData }) {
+  const [imgSrc, setImgSrc] = useState(props.data.ImgSliderData[0]);
   return (
     <section className="m-5 flex gap-10  md:m-10">
-      <div className="slider bdr sticky top-0 h-screen flex-1">
+      <div className="slider bdr sticky top-0 flex h-screen flex-1">
         {/* {props.data.ImgSliderData.map((item,i)=>{
           if()
         })} */}
-        {props.data.ImgSliderData.map((item, i) => {
-          if (item.type === "photo") {
-            return (
-              <img
-                src={item.imgUrl}
-                width={70}
-                height={70}
-                alt="shop item for sell"
-              />
-            );
-          }
-        })}
+        <div className="imgSidebarBtn bdr3 flex w-56 flex-col gap-5">
+          {props.data.ImgSliderData.map((item, i) => {
+            if (item.type === "photo") {
+              return (
+                <img
+                  src={item.imgUrl}
+                  width={70}
+                  height={70}
+                  alt="shop item for sell"
+                />
+              );
+            }
+          })}
+        </div>
+        <div className="mainSlider flex snap-x snap-mandatory overflow-x-scroll">
+          {/* {props.data.ImgSliderData.map((item, i) => { */}
+          {imgSrc.type === "photo" ? (
+            <img
+              className="w-fit snap-center"
+              src={imgSrc.imgUrl}
+              // width={70}
+              // height={30}
+              alt="shop item for sell"
+            />
+          ) : imgSrc.type === "video" ? (
+            <video src={imgSrc.imgUrl}></video>
+          ) : (
+            "error"
+          )}
+        </div>
       </div>
+      {/* {props.data.ImgSliderData[0].type} */}
 
       <div className="details  flex-1">
         <h2 className="text-4xl font-bold">{props.data.title}</h2>
