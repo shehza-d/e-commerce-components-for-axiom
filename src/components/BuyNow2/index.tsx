@@ -7,7 +7,11 @@ import { useState } from "react";
 
 // export default function BuyNow2({TableData,ImgSliderData,UlPoints,details,price,title}:BuyNowData) {
 export default function BuyNow2(props: { data: BuyNowData }) {
-  const [imgSrc, setImgSrc] = useState(props.data.ImgSliderData[0]);
+  const [imgSrc, setImgSrc] = useState<{
+    type: "photo" | "video";
+    imgUrl: string;
+  }>(props.data.ImgSliderData[0]);
+
   return (
     <section className="m-5 flex gap-10  md:m-10">
       <div className="slider bdr sticky top-0 flex h-screen flex-1">
@@ -18,12 +22,17 @@ export default function BuyNow2(props: { data: BuyNowData }) {
           {props.data.ImgSliderData.map((item, i) => {
             if (item.type === "photo") {
               return (
-                <img
-                  src={item.imgUrl}
-                  width={70}
-                  height={70}
-                  alt="shop item for sell"
-                />
+                <div
+                  className="border-red-500 active:border-2 "
+                  onClick={() => setImgSrc(item)}
+                >
+                  <img
+                    src={item.imgUrl}
+                    width={70}
+                    height={70}
+                    alt="shop item for sell"
+                  />
+                </div>
               );
             }
           })}
