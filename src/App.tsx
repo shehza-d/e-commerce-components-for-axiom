@@ -1,7 +1,7 @@
 import { ImgGridData, BuyNowData, ImgCardData } from "./data/index";
 import { BuyNow2, ImgGrid1, ImgCards3 } from "./components";
 
-function App(): JSX.Element {
+export default function App(): JSX.Element {
   return (
     <main className="bg-white">
       <ImgGrid1 data={ImgGridData} />
@@ -10,5 +10,3 @@ function App(): JSX.Element {
     </main>
   );
 }
-
-export default App;

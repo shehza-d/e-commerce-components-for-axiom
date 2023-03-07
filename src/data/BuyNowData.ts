@@ -30,11 +30,11 @@ export const BuyNowData = {
       imgUrl:
         "https://res.cloudinary.com/deh1sqok6/image/upload/v1677856363/axiom-1/byv4oq9xcnr9fqavr4uw.webp",
     },
-    // {
-    //   type: "video",
-    //   imgUrl:
-    //     "https://res.cloudinary.com/deh1sqok6/video/upload/v1677856366/axiom-1/cgvgbddex7fklthcvdui.mp4",
-    // },
+    {
+      type: "video",
+      imgUrl:
+        "https://res.cloudinary.com/deh1sqok6/video/upload/v1677856366/axiom-1/cgvgbddex7fklthcvdui.mp4",
+    },
     {
       type: "photo",
       imgUrl:

@@ -37,7 +37,7 @@ export default function BuyNow2(props: { data: BuyNowData }) {
             }
           })}
         </div>
-        <div className="mainSlider flex snap-x snap-mandatory overflow-x-scroll">
+        <div className="mainSlider flex snap-x snap-mandatory ">
           {/* {props.data.ImgSliderData.map((item, i) => { */}
           {imgSrc.type === "photo" ? (
             <img
