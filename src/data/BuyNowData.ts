@@ -1,4 +1,6 @@
-export const BuyNowData = {
+import { BuyNowType } from "../types/types";
+
+export const BuyNowData: BuyNowType = {
   title: "Chambray Button Down",
   price: {
     s: 58,
@@ -10,10 +12,10 @@ export const BuyNowData = {
     "<p className='italic'>This is a demonstration store. You can purchase products like this  from{' '}<a className='S_Underline-black relative inline-block underline decoration-slate-300 underline-offset-[4.5px] hover:after:left-0 hover:after:w-full' href='https://unitedbyblue.com/'>United By Blue</a></p><br /><p>Like your well-worn pair of jeans in short-sleeve button down form. Features an understated plus-sign pattern.</p>",
 
   UlPoints: [
-    { li: "All-over print " },
-    { li: "Full button down placket and collar " },
-    { li: "Front left patch pocket " },
-    { li: "Natural corozo buttons throughout " },
+    { li: "All-over print" },
+    { li: "Full button down placket and collar" },
+    { li: "Front left patch pocket" },
+    { li: "Natural corozo buttons throughout" },
     { li: "Curved hemline" },
   ],
 

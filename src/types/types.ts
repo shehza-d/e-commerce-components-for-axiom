@@ -6,7 +6,11 @@ export type ImgGridType = {
 };
 
 //2
-export type BuyNowData = {
+export type ImgSliderType = {
+  type: "photo" | "video";
+  imgUrl: string;
+};
+export type BuyNowType = {
   title: string;
   price: {
     s: number;
@@ -24,10 +28,7 @@ export type BuyNowData = {
     uk: number;
     europe: number;
   }[];
-  ImgSliderData: {
-    type: "photo" | "video";
-    imgUrl: string;
-  }[];
+  ImgSliderData: ImgSliderType[];
 };
 
 export type SizeTableType = {

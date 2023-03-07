@@ -1,4 +1,4 @@
-import { ImgCardType } from "../../../types/types";
+import { ImgCardType } from "../../types/types";
 
 export default function ImgCards3(props: { data: ImgCardType[] }) {
   return (

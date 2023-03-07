@@ -1,4 +1,4 @@
-import { SizeTableType } from "../../../types/types";
+import { SizeTableType } from "../../types/types";
 
 export default function Table(props: { data: SizeTableType }) {
   return (

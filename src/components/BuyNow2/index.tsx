@@ -1,40 +1,43 @@
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import SizeUL from "./SizeUL";
 import Table from "./Table";
-import { BuyNowData } from "../../../types/types";
-import PortableText from "react-portable-text";
+import { BuyNowType, ImgSliderType } from "../../types/types";
+// import PortableText from "react-portable-text";
 import { useState } from "react";
 
-// export default function BuyNow2({TableData,ImgSliderData,UlPoints,details,price,title}:BuyNowData) {
-export default function BuyNow2(props: { data: BuyNowData }) {
-  const [imgSrc, setImgSrc] = useState<{
-    type: "photo" | "video";
-    imgUrl: string;
-  }>(props.data.ImgSliderData[0]);
+// export default function BuyNow2({TableData,ImgSliderData,UlPoints,details,price,title}:BuyNowType) {
+export default function BuyNow2(props: { data: BuyNowType }) {
+  const [imgSrc, setImgSrc] = useState<ImgSliderType>(
+    props.data.ImgSliderData[1]
+  );
 
   return (
     <section className="m-5 flex gap-10  md:m-10">
       <div className="slider bdr sticky top-0 flex h-screen flex-1">
-        {/* {props.data.ImgSliderData.map((item,i)=>{
-          if()
-        })} */}
-        <div className="imgSidebarBtn bdr3 flex w-56 flex-col gap-5">
+        <div className="imgSidebarBtn bdr3 flex flex-col gap-5">
           {props.data.ImgSliderData.map((item, i) => {
-            if (item.type === "photo") {
-              return (
-                <div
-                  className="border-red-500 active:border-2 "
-                  onClick={() => setImgSrc(item)}
-                >
+            return (
+              <div
+                className="active:borer-2 border-red-500"
+                key={i}
+                onClick={() => setImgSrc(item)}
+              >
+                {item.type === "photo" ? (
                   <img
                     src={item.imgUrl}
                     width={70}
                     height={70}
                     alt="shop item for sell"
                   />
-                </div>
-              );
-            }
+                ) : item.type === "video" ? (
+                  <video width="70" height="70" muted>
+                    <source src={item.imgUrl} type="video/mp4" />
+                  </video>
+                ) : (
+                  <p>uhuh</p>
+                )}
+              </div>
+            );
           })}
         </div>
         <div className="mainSlider flex snap-x snap-mandatory ">
@@ -48,7 +51,9 @@ export default function BuyNow2(props: { data: BuyNowData }) {
               alt="shop item for sell"
             />
           ) : imgSrc.type === "video" ? (
-            <video src={imgSrc.imgUrl}></video>
+            <video width="450" height="500" muted autoPlay>
+              <source src={imgSrc.imgUrl} type="video/mp4" />
+            </video>
           ) : (
             "error"
           )}

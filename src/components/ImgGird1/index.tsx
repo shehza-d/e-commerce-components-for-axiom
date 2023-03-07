@@ -1,4 +1,4 @@
-import { ImgGridType } from "../../../types/types";
+import { ImgGridType } from "../../types/types";
 import Img from "./Img";
 
 export default function ImgGrid1(props: { data: ImgGridType[] }) {
