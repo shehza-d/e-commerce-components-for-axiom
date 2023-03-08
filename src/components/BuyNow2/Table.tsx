@@ -2,7 +2,7 @@ import { SizeTableType } from "../../types/types";
 
 export default function Table(props: { data: SizeTableType }) {
   return (
-    <table className="bdr w-full">
+    <table className="mt-6 w-full">
       <thead>
         <tr className="text-left">
           <th className="border-2 p-2" colSpan={2}>

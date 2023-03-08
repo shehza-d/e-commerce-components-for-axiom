@@ -4,6 +4,7 @@ import Table from "./Table";
 import { BuyNowType, ImgSliderType } from "../../types/types";
 // import PortableText from "react-portable-text";
 import { useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 // export default function BuyNow2({TableData,ImgSliderData,UlPoints,details,price,title}:BuyNowType) {
 export default function BuyNow2(props: { data: BuyNowType }) {
@@ -13,20 +14,20 @@ export default function BuyNow2(props: { data: BuyNowType }) {
 
   return (
     <section className="m-5 flex gap-10  md:m-10">
-      <div className="slider bdr sticky top-0 flex h-screen flex-1">
-        <div className="imgSidebarBtn bdr3 flex flex-col gap-5">
+      <div className="slider sticky top-0 flex h-screen flex-1">
+        <div className="imgSidebarBtn  flex flex-col gap-5">
           {props.data.ImgSliderData.map((item, i) => {
             return (
               <div
-                className="active:borer-2 border-red-500"
+                className={`-ml-6 mr-6 ring-2 ring-gray-800`}
                 key={i}
                 onClick={() => setImgSrc(item)}
               >
                 {item.type === "photo" ? (
                   <img
                     src={item.imgUrl}
-                    width={70}
-                    height={70}
+                    width={75}
+                    height={75}
                     alt="shop item for sell"
                   />
                 ) : item.type === "video" ? (
@@ -34,13 +35,13 @@ export default function BuyNow2(props: { data: BuyNowType }) {
                     <source src={item.imgUrl} type="video/mp4" />
                   </video>
                 ) : (
-                  <p>uhuh</p>
+                  <p>No Image found</p>
                 )}
               </div>
             );
           })}
         </div>
-        <div className="mainSlider flex snap-x snap-mandatory ">
+        <div className="mainSlider mb-2 flex h-4/5 w-full snap-x snap-mandatory justify-center self-end">
           {/* {props.data.ImgSliderData.map((item, i) => { */}
           {imgSrc.type === "photo" ? (
             <img
@@ -55,7 +56,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
               <source src={imgSrc.imgUrl} type="video/mp4" />
             </video>
           ) : (
-            "error"
+            <p>No Image found</p>
           )}
         </div>
       </div>
@@ -118,20 +119,23 @@ export default function BuyNow2(props: { data: BuyNowType }) {
           ))}
         </ul>
 
-        <details className="border-b-2 pb-4 transition-all delay-300 duration-300">
-          <summary>
-            <h6 className="mt-8 mb-2 font-semibold tracking-widest">
+        <details className="3 group border-b-2 pb-4 transition-all delay-300 duration-1000">
+          <summary className=" mt-8 flex cursor-pointer items-center justify-between py-3 transition-all delay-300 duration-1000">
+            <h6 className="text-sm font-semibold tracking-widest">
               SIZE CHART
             </h6>
+            <IoIosArrowDown className="group-open:rotate-180" />
           </summary>
           <Table data={props.data.TableData} />
         </details>
-        <details className="border-b-2 pb-4">
-          <summary>
-            <h6 className="mt-8 mb-2 font-semibold tracking-widest">
+        <details className="group border-b-2 pb-4">
+          <summary className="mt-8 flex cursor-pointer items-center justify-between py-3">
+            <h6 className="text-sm font-semibold tracking-widest">
               ASK A QUESTION
             </h6>
+            <IoIosArrowDown className="group-open:rotate-180" />
           </summary>
+
           <form className="mt-3 flex flex-col gap-3">
             <label htmlFor="userName">Name</label>
             <input

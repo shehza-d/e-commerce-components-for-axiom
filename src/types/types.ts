@@ -9,6 +9,7 @@ export type ImgGridType = {
 export type ImgSliderType = {
   type: "photo" | "video";
   imgUrl: string;
+  active: boolean;
 };
 export type BuyNowType = {
   title: string;

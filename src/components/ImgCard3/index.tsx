@@ -8,7 +8,7 @@ export default function ImgCards3(props: { data: ImgCardType[] }) {
         <button className="p-2">View all</button>
       </div>
 
-      <div className="flex flex-col flex-wrap items-center gap-8 min-[916px]:flex-row">
+      <div className="flex flex-col items-center gap-8 md:flex-row min-[916px]:flex-row">
         {props.data.map((item, i) => (
           <div className="min-w-[250px] flex-1" key={i}>
             <a href={`${item.link}`} className={``}>

@@ -31,21 +31,25 @@ export const BuyNowData: BuyNowType = {
       type: "video",
       imgUrl:
         "https://res.cloudinary.com/deh1sqok6/video/upload/v1677856366/axiom-1/cgvgbddex7fklthcvdui.mp4",
+      active: true,
     },
     {
       type: "photo",
       imgUrl:
         "https://res.cloudinary.com/deh1sqok6/image/upload/v1677856363/axiom-1/byv4oq9xcnr9fqavr4uw.webp",
+      active: false,
     },
     {
       type: "photo",
       imgUrl:
         "https://res.cloudinary.com/deh1sqok6/image/upload/v1677856364/axiom-1/nzu6mxpzhnurgxhtpaw7.webp",
+      active: false,
     },
     {
       type: "photo",
       imgUrl:
         "https://res.cloudinary.com/deh1sqok6/image/upload/v1677856363/axiom-1/ap2jzysxtaohbxqmcwfs.webp",
+      active: false,
     },
   ],
 };
