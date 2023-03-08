@@ -8,7 +8,7 @@ import { useState } from "react";
 // export default function BuyNow2({TableData,ImgSliderData,UlPoints,details,price,title}:BuyNowType) {
 export default function BuyNow2(props: { data: BuyNowType }) {
   const [imgSrc, setImgSrc] = useState<ImgSliderType>(
-    props.data.ImgSliderData[1]
+    props.data.ImgSliderData[0]
   );
 
   return (
