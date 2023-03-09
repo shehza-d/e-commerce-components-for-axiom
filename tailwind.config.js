@@ -3,12 +3,13 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
-      "sm": "320px",
-      "mm": "375px",
-      "ml": "425px",
-      "md": "768px",
-      "lg": "1024px",
-      "xl": "1440px",
+      sm: "320px",
+      mm: "375px",
+      ml: "425px",
+      cc: "560px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1440px",
       "2xl": "2560px",
     },
     extend: {},
@@ -25,7 +26,6 @@ module.exports = {
 // 	xl: "1440px",
 // 	"2xl": "2560px",
 // };
-
 
 // screens: { Default sizes of Tailwind
 //   'sm': '640px',

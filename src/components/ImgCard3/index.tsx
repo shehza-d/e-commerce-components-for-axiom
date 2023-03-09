@@ -2,7 +2,7 @@ import { ImgCardType } from "../../types/types";
 
 export default function ImgCards3(props: { data: ImgCardType[] }) {
   return (
-    <section className="p-5 ml:p-8">
+    <section className="">
       <div className="flex justify-between py-6">
         <h3 className="text-2xl font-bold">From the journal</h3>
         <button className="p-2">View all</button>

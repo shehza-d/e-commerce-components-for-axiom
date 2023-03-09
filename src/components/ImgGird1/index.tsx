@@ -4,7 +4,7 @@ import Img from "./Img";
 export default function ImgGrid1(props: { data: ImgGridType[] }) {
   return (
     <>
-      <section className="m-7 min-h-screen">
+      <section className="min-h-screen">
         <div className="flex flex-wrap">
           <Img data={props?.data[0]} />
           <Img data={props?.data[1]} />

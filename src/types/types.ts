@@ -10,6 +10,7 @@ export type ImgSliderType = {
   type: "photo" | "video";
   imgUrl: string;
   active: boolean;
+  thumbnail?: string;
 };
 export type BuyNowType = {
   title: string;

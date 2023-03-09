@@ -13,15 +13,18 @@ export default function BuyNow2(props: { data: BuyNowType }) {
   );
 
   return (
-    <section className="m-5 flex gap-10  md:m-10">
-      <div className="slider sticky top-0 flex h-screen flex-1">
-        <div className="imgSidebarBtn  flex flex-col gap-5">
+    <section className="flex flex-wrap gap-10">
+      <div className="slider top-0 flex h-screen min-w-[450px] flex-1 justify-center pt-32 md:sticky">
+        <div className="imgSidebarBtn order-last ml-6 flex flex-col gap-5 md:order-none min-[770px]:mr-2 min-[830px]:mr-6">
           {props.data.ImgSliderData.map((item, i) => {
             return (
               <div
-                className={`-ml-6 mr-6 ring-2 ring-gray-800`}
+                className={`cursor-pointer ${
+                  item.active ? "ring-2 ring-gray-800" : ""
+                }`}
                 key={i}
                 onClick={() => setImgSrc(item)}
+                // onClick={() => setImgSrc({ ...item, active: true })}
               >
                 {item.type === "photo" ? (
                   <img
@@ -31,9 +34,12 @@ export default function BuyNow2(props: { data: BuyNowType }) {
                     alt="shop item for sell"
                   />
                 ) : item.type === "video" ? (
-                  <video width="70" height="70" muted>
-                    <source src={item.imgUrl} type="video/mp4" />
-                  </video>
+                  <img
+                    src={item.thumbnail}
+                    width={75}
+                    height={75}
+                    alt="shop item for sell"
+                  />
                 ) : (
                   <p>No Image found</p>
                 )}
@@ -41,18 +47,24 @@ export default function BuyNow2(props: { data: BuyNowType }) {
             );
           })}
         </div>
-        <div className="mainSlider mb-2 flex h-4/5 w-full snap-x snap-mandatory justify-center self-end">
+        <div className="mainSlider mb-2 flex h-[70%] snap-x snap-mandatory justify-center ml:h-[80%] md:h-[90%]">
           {/* {props.data.ImgSliderData.map((item, i) => { */}
           {imgSrc.type === "photo" ? (
             <img
-              className="w-fit snap-center"
+              className="w-fit cursor-zoom-in snap-center"
               src={imgSrc.imgUrl}
               // width={70}
               // height={30}
               alt="shop item for sell"
             />
           ) : imgSrc.type === "video" ? (
-            <video width="450" height="500" muted autoPlay>
+            <video
+              // width="450"
+              // height="500"
+              className="cursor-grab"
+              muted
+              autoPlay
+            >
               <source src={imgSrc.imgUrl} type="video/mp4" />
             </video>
           ) : (
@@ -62,7 +74,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
       </div>
       {/* {props.data.ImgSliderData[0].type} */}
 
-      <div className="details  flex-1">
+      <div className="details min-w-[300px] flex-1">
         <h2 className="text-4xl font-bold">{props.data.title}</h2>
         <span className="block divide-y divide-gray-300  py-6 text-2xl font-light">
           ${props.data.price.m}
@@ -72,11 +84,11 @@ export default function BuyNow2(props: { data: BuyNowType }) {
         {/*  */}
         <div className="btns flex flex-col gap-2">
           <button className="group flex h-12 items-center justify-around border-2 border-slate-800 bg-transparent text-lg font-bold text-slate-800 transition-all delay-300 duration-1000">
-            <div className="w-9"></div>
+            <div className="hidden w-9 cc:block"></div>
             <span className="transition-all duration-300 group-hover:-translate-x-3">
               Add to cart
             </span>
-            <MdOutlineArrowRightAlt className="relative -right-24 -z-20 text-4xl text-gray-800 transition-all duration-300 group-hover:right-7 group-hover:z-10 group-hover:translate-x-5" />
+            <MdOutlineArrowRightAlt className="relative -right-8 -z-20 hidden text-4xl text-gray-800 transition-all duration-300 group-hover:right-7 group-hover:z-10 group-hover:translate-x-5 cc:block lg:-right-20" />
           </button>
           <button className="h-12 bg-gray-900 text-lg font-bold text-gray-100">
             Buy it now

@@ -32,6 +32,8 @@ export const BuyNowData: BuyNowType = {
       imgUrl:
         "https://res.cloudinary.com/deh1sqok6/video/upload/v1677856366/axiom-1/cgvgbddex7fklthcvdui.mp4",
       active: true,
+      thumbnail:
+        "https://res.cloudinary.com/deh1sqok6/image/upload/v1678376971/axiom-1/jfelucaozimam8hemee6.png",
     },
     {
       type: "photo",
