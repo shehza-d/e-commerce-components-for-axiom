@@ -13,8 +13,8 @@ export default function BuyNow2(props: { data: BuyNowType }) {
   );
 
   return (
-    <section className="flex flex-wrap gap-10">
-      <div className="slider top-0 flex h-screen min-w-[450px] flex-1 justify-center pt-32 md:sticky">
+    <section className="flex flex-wrap md:gap-10">
+      <div className="slider top-0 flex h-screen min-w-[250px] flex-1 justify-center pt-32 mm:min-w-[350px] cc:min-w-[450px] md:sticky">
         <div className="imgSidebarBtn order-last ml-6 flex flex-col gap-5 md:order-none min-[770px]:mr-2 min-[830px]:mr-6">
           {props.data.ImgSliderData.map((item, i) => {
             return (
@@ -29,15 +29,17 @@ export default function BuyNow2(props: { data: BuyNowType }) {
                 {item.type === "photo" ? (
                   <img
                     src={item.imgUrl}
-                    width={75}
-                    height={75}
+                    className="h-[75px] w-[50px] min-[450px]:h-[95px] min-[450px]:w-[75px]"
+                    // width={75}
+                    // height={75}
                     alt="shop item for sell"
                   />
                 ) : item.type === "video" ? (
                   <img
                     src={item.thumbnail}
-                    width={75}
-                    height={75}
+                    className="h-[75px] w-[50px] min-[450px]:h-[95px] min-[450px]:w-[75px]"
+                    // width={75}
+                    // height={75}
                     alt="shop item for sell"
                   />
                 ) : (
@@ -47,7 +49,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
             );
           })}
         </div>
-        <div className="mainSlider mb-2 flex h-[70%] snap-x snap-mandatory justify-center ml:h-[80%] md:h-[90%]">
+        <div className="mainSlider mb-2 flex h-[70%]  snap-x snap-mandatory justify-center ml:h-[80%] md:h-[90%]">
           {/* {props.data.ImgSliderData.map((item, i) => { */}
           {imgSrc.type === "photo" ? (
             <img
@@ -61,7 +63,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
             <video
               // width="450"
               // height="500"
-              className="cursor-grab"
+              className="cursor-grab self-start"
               muted
               autoPlay
             >
@@ -72,9 +74,8 @@ export default function BuyNow2(props: { data: BuyNowType }) {
           )}
         </div>
       </div>
-      {/* {props.data.ImgSliderData[0].type} */}
 
-      <div className="details min-w-[300px] flex-1">
+      <div className="details flex-1 mm:min-w-[300px]">
         <h2 className="text-4xl font-bold">{props.data.title}</h2>
         <span className="block divide-y divide-gray-300  py-6 text-2xl font-light">
           ${props.data.price.m}
@@ -82,7 +83,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
         <h6 className="font-semibold tracking-widest">SIZE</h6>
         <SizeUL />
         {/*  */}
-        <div className="btns flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
           <button className="group flex h-12 items-center justify-around border-2 border-slate-800 bg-transparent text-lg font-bold text-slate-800 transition-all delay-300 duration-1000">
             <div className="hidden w-9 cc:block"></div>
             <span className="transition-all duration-300 group-hover:-translate-x-3">

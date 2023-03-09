@@ -43,6 +43,20 @@
     @apply after:absolute after:left-0 after:top-0 after:z-20 after:h-full after:w-full after:bg-black  after:text-black after:opacity-50 after:content-[""];
   } */
 }
+
+.fade_in {
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 details > summary {
   list-style: none;
 }

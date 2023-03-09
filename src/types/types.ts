@@ -3,6 +3,7 @@ export type ImgGridType = {
   name: string;
   imgUrl: string;
   grow: boolean;
+  fade_duration: number;
 };
 
 //2

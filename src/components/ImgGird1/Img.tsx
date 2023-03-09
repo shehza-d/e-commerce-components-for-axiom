@@ -5,7 +5,8 @@ export default function Img(props: { data: ImgGridType }) {
   return (
     <a
       href={`www.facebook.com/${props.data.name}`}
-      className={`group flex ${
+      style={{ animation: `fadeInAnimation ease ${props.data.fade_duration}s` }}
+      className={`fade_in group flex ${
         props.data.grow ? "w-80 flex-grow-[2]" : "w-32 flex-grow"
       }`}
     >
