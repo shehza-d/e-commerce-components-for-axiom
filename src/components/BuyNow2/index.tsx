@@ -14,14 +14,13 @@ export default function BuyNow2(props: { data: BuyNowType }) {
 
   return (
     <section className="slide_in flex flex-wrap gap-10">
-      <div className="slider bdr top-0 flex h-screen min-w-[250px] flex-1 justify-center pt-32 mm:min-w-[350px] cc:min-w-[450px] md:sticky">
-        <div className="imgSidebarBtn order-last ml-6 flex w-20 flex-col gap-5 md:order-none min-[770px]:mr-2 min-[830px]:mr-6">
+      <div className="slider top-0 flex h-full min-w-[250px] flex-1 justify-center pt-32  mm:min-w-[350px] cc:min-w-[450px] md:sticky">
+        <div className="imgSidebarBtn order-last ml-3 flex flex-col gap-5 ml:ml-6 md:order-none min-[770px]:mr-2 min-[830px]:mr-6">
           {props.data.ImgSliderData.map((item, i) => {
             return (
               <div
-                className={`cursor-pointer ${
-                  item.active ? "ring-2 ring-gray-800" : ""
-                }`}
+                className={`cursor-pointer
+                 ${item.active ? "ring-2 ring-gray-800" : ""}`}
                 key={i}
                 onClick={() => setImgSrc(item)}
                 // onClick={() => setImgSrc({ ...item, active: true })}
@@ -29,7 +28,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
                 {item.type === "photo" ? (
                   <img
                     src={item.imgUrl}
-                    className="h-[75px] w-[50px] min-[450px]:h-[95px] min-[450px]:w-[75px]"
+                    className="h-[4.688rem] w-[3.125rem] min-[450px]:h-[5.938rem] min-[450px]:w-[4.688rem]"
                     // width={75}
                     // height={75}
                     alt="shop item for sell"
@@ -37,7 +36,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
                 ) : item.type === "video" ? (
                   <img
                     src={item.thumbnail}
-                    className="h-[75px] w-[50px] min-[450px]:h-[95px] min-[450px]:w-[75px]"
+                    className="h-[4.688rem] w-[3.125rem] min-[450px]:h-[5.938rem] min-[450px]:w-[4.688rem]"
                     // width={75}
                     // height={75}
                     alt="shop item for sell"
@@ -49,7 +48,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
             );
           })}
         </div>
-        <div className="mainSlider bdr2 mb-2 flex h-[22rem] w-[19rem] justify-center ml:h-[27rem] ml:w-[24rem] md:h-[32.1875rem] md:w-[29.5625rem] ">
+        <div className="mainSlider mb-2 flex h-[22rem] w-[14rem] justify-center ml:w-[19rem] md:h-[32.1875rem] md:w-[29.5625rem] ">
           {/*h-[70%] ml:h-[80%] md:h-[110%] */}
           {/* {props.data.ImgSliderData.map((item, i) => { */}
           {imgSrc.type === "photo" ? (
