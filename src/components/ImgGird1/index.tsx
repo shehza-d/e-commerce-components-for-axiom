@@ -10,7 +10,7 @@ export default function ImgGrid1(props: { data: ImgGridType[] }) {
           <Img data={props?.data[1]} />
           <Img data={props?.data[2]} />
         </div>
-        <div className="flex flex-wrap bg-gray-900">
+        <div className="flex flex-wrap  bg-gray-900">
           <Img data={props?.data[3]} />
           <Img data={props?.data[4]} />
           <Img data={props?.data[5]} />

@@ -5,13 +5,12 @@ export default function Img(props: { data: ImgGridType }) {
   return (
     <a
       href={`www.facebook.com/${props.data.name}`}
-      style={{ animation: `fadeInAnimation ease ${props.data.fade_duration}s` }}
-      className={`fade_in group flex ${
-        props.data.grow ? "w-80 flex-grow-[2]" : "w-32 flex-grow"
-      }`}
+      // style={{ animation: `fadeInAnimation ease ${props.data.fade_duration}s` }}
+      className={`animation_triggering_class group flex overflow-hidden
+      ${props.data.grow ? "w-80 flex-grow-[2]" : "w-32 flex-grow"}`}
     >
       <div
-        className="flex h-[270px] w-full items-end bg-cover bg-center bg-no-repeat p-3 sm:h-[300px]"
+        className="scale_triggering_class flex h-[270px] w-full items-end bg-cover bg-center bg-no-repeat p-3 sm:h-[300px]"
         style={{
           backgroundImage: `url(${props.data.imgUrl})`,
         }}

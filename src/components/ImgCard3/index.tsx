@@ -1,23 +1,5 @@
 import { ImgCardType } from "../../types/types";
 
-const reveal = () => {
-  let detectionClass = document.querySelectorAll(".animation_triggering_class");
-  for (let i = 0; i < detectionClass.length; i++) {
-    let windowHeight = window.innerHeight;
-    let revealTop = detectionClass[i].getBoundingClientRect().top;
-    let revealPoint = 150;
-
-    if (revealTop < windowHeight - revealPoint) {
-      detectionClass[i].classList.add("fade_in");
-    } else {
-      detectionClass[i].classList.remove("fade_in");
-    }
-  }
-};
-window.addEventListener("scroll", reveal);
-
-reveal();
-
 export default function ImgCards3(props: { data: ImgCardType[] }) {
   return (
     <section className="">
@@ -29,14 +11,13 @@ export default function ImgCards3(props: { data: ImgCardType[] }) {
       <div className=" flex flex-col items-center gap-8 md:flex-row min-[916px]:flex-row">
         {props.data.map((item, i) => (
           <div
-            style={{ animation: `fadeInAnimation ease 5s` }}
             className="animation_triggering_class flex-1 mm:min-w-[250px]"
             key={i}
           >
             <a href={`${item.link}`} className={``}>
               <div className="overflow-hidden">
                 <img
-                  className="duration-[1500ms] hover:scale-110 hover:brightness-75"
+                  className="scale_triggering_class duration-[1500ms] hover:scale-110 hover:brightness-75"
                   src={item.img_url}
                   alt={item.title}
                 />

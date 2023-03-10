@@ -44,16 +44,48 @@
   } */
 }
 
+/* 1 */
 .fade_in {
+  /* animation: fadeInAnimation ease-in-out 3000ms; */
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+/* 2 */
+/* .fade_in_cards { */
+/* animation: fadeInAnimation ease-in-out 5000ms; */
+/* animation-play-state: paused; */
+/* animation-iteration-count: 1; }*/
+
+.animate {
+  animation: fadeInAnimation ease-in-out;
+  animation-duration: 800ms;
+  animation-iteration-count: 1;
+  /* animation-play-state: running; */
+}
+.scale {
+  animation: scale ease-in-out 800ms;
+  animation-iteration-count: 1;
+}
+/* .nth:nth-child(1) {
+  animation-duration: 2000ms;
+}
+.nth:nth-child(3) {
+  animation-duration: 200ms;
+} */
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
