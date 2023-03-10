@@ -45,11 +45,11 @@
 }
 
 /* 1 */
-.fade_in {
-  /* animation: fadeInAnimation ease-in-out 3000ms; */
-  animation-iteration-count: 1;
+/* .fade_in { */
+/* animation: fadeInAnimation ease-in-out 3000ms; */
+/* animation-iteration-count: 1;
   animation-fill-mode: forwards;
-}
+} */
 /* 2 */
 /* .fade_in_cards { */
 /* animation: fadeInAnimation ease-in-out 5000ms; */
@@ -86,6 +86,21 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+.slide_in {
+  animation: slidein ease-in-out 1000ms;
+}
+@keyframes slidein {
+  from {
+    gap: 5.5rem;
+    /* margin-right: -10%; */
+    /* width: 300%; */
+  }
+  to {
+    gap: 2.5rem;
+    /* margin-left: 0%; */
+    /* width: 100%; */
   }
 }
 

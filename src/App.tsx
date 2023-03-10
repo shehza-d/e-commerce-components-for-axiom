@@ -40,9 +40,13 @@ export default function App(): JSX.Element {
   return (
     <main className="flex flex-col items-center bg-white ">
       <div className="mx-4 max-w-[1220px] min-[470px]:mx-6 cc:mx-10">
+        <div className="h-[50vh]"></div>
+        <div className="h-[50vh]"></div>
         <ImgGrid1 data={ImgGridData} />
         <BuyNow2 data={BuyNowData} />
         <ImgCards3 data={ImgCardData} />
+        <div className="h-[50vh]"></div>
+        <div className="h-[50vh]"></div>
       </div>
     </main>
   );

@@ -8,7 +8,7 @@ export default function ImgCards3(props: { data: ImgCardType[] }) {
         <button className="p-2">View all</button>
       </div>
 
-      <div className=" flex flex-col items-center gap-8 md:flex-row min-[916px]:flex-row">
+      <div className="flex flex-col items-center gap-8 md:flex-row min-[916px]:flex-row">
         {props.data.map((item, i) => (
           <div
             className="animation_triggering_class flex-1 mm:min-w-[250px]"
@@ -38,10 +38,6 @@ export default function ImgCards3(props: { data: ImgCardType[] }) {
           </div>
         ))}
       </div>
-
-      <div className="h-[50vh]"></div>
-      <div className="h-[50vh]"></div>
-      <div className="h-[50vh]"></div>
     </section>
   );
 }

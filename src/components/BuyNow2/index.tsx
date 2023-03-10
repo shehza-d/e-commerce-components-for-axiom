@@ -13,9 +13,9 @@ export default function BuyNow2(props: { data: BuyNowType }) {
   );
 
   return (
-    <section className="flex flex-wrap md:gap-10">
-      <div className="slider top-0 flex h-screen min-w-[250px] flex-1 justify-center pt-32 mm:min-w-[350px] cc:min-w-[450px] md:sticky">
-        <div className="imgSidebarBtn order-last ml-6 flex flex-col gap-5 md:order-none min-[770px]:mr-2 min-[830px]:mr-6">
+    <section className="slide_in flex flex-wrap gap-10">
+      <div className="slider bdr top-0 flex h-screen min-w-[250px] flex-1 justify-center pt-32 mm:min-w-[350px] cc:min-w-[450px] md:sticky">
+        <div className="imgSidebarBtn order-last ml-6 flex w-20 flex-col gap-5 md:order-none min-[770px]:mr-2 min-[830px]:mr-6">
           {props.data.ImgSliderData.map((item, i) => {
             return (
               <div
@@ -49,11 +49,12 @@ export default function BuyNow2(props: { data: BuyNowType }) {
             );
           })}
         </div>
-        <div className="mainSlider mb-2 flex h-[70%]  snap-x snap-mandatory justify-center ml:h-[80%] md:h-[90%]">
+        <div className="mainSlider bdr2 mb-2 flex h-[22rem] w-[19rem] justify-center ml:h-[27rem] ml:w-[24rem] md:h-[32.1875rem] md:w-[29.5625rem] ">
+          {/*h-[70%] ml:h-[80%] md:h-[110%] */}
           {/* {props.data.ImgSliderData.map((item, i) => { */}
           {imgSrc.type === "photo" ? (
             <img
-              className="w-fit cursor-zoom-in snap-center"
+              className="cursor-zoom-in self-start"
               src={imgSrc.imgUrl}
               // width={70}
               // height={30}
@@ -96,7 +97,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
           </button>
         </div>
         <div className="my-6 text-base font-normal text-slate-700">
-          {props.data.details}
+          {/* {props.data.details} */}
 
           {/*     <PortableText
                // Pass in block content straight from Sanity.io
@@ -110,7 +111,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
                }}
     /> */}
 
-          {/* <p className="italic">
+          <p className="italic">
             This is a demonstration store. You can purchase products like this
             from{" "}
             <a
@@ -124,7 +125,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
           <p className="">
             Like your well-worn pair of jeans in short-sleeve button down form.
             Features an understated plus-sign pattern.
-          </p> */}
+          </p>
         </div>
         <ul className="list-inside list-disc py-2 px-8 font-light">
           {props.data.UlPoints.map((item, i) => (
@@ -137,32 +138,37 @@ export default function BuyNow2(props: { data: BuyNowType }) {
             <h6 className="text-sm font-semibold tracking-widest">
               SIZE CHART
             </h6>
-            <IoIosArrowDown className="group-open:rotate-180" />
+            <IoIosArrowDown className="transition-all duration-500 group-open:rotate-180" />
           </summary>
           <Table data={props.data.TableData} />
         </details>
-        <details className="group border-b-2 pb-4">
+        <details className="group border-b-2 pb-4 ">
           <summary className="mt-8 flex cursor-pointer items-center justify-between py-3">
             <h6 className="text-sm font-semibold tracking-widest">
               ASK A QUESTION
             </h6>
-            <IoIosArrowDown className="group-open:rotate-180" />
+            <IoIosArrowDown className="transition-all duration-500 group-open:rotate-180" />
           </summary>
 
           <form className="mt-3 flex flex-col gap-3">
-            <label htmlFor="userName">Name</label>
-            <input
-              id="userName"
-              type="text "
-              className="border p-2 outline-none focus:border-gray-900"
-            />
-
-            <label htmlFor="userEmail">Email</label>
-            <input
-              id="userEmail"
-              type="e "
-              className="border p-2 outline-none focus:border-gray-900"
-            />
+            <div className="flex flex-wrap gap-2">
+              <div className="flex flex-1 flex-col gap-3">
+                <label htmlFor="userName">Name</label>
+                <input
+                  id="userName"
+                  type="text"
+                  className="border p-2 outline-none focus:border-gray-900"
+                />
+              </div>
+              <div className="flex flex-1 flex-col gap-3">
+                <label htmlFor="userEmail">Email</label>
+                <input
+                  id="userEmail"
+                  type="email"
+                  className="border p-2 outline-none focus:border-gray-900"
+                />
+              </div>
+            </div>
 
             <label htmlFor="userMessage">Message</label>
             <textarea
@@ -178,22 +184,24 @@ export default function BuyNow2(props: { data: BuyNowType }) {
               Send
             </button>
           </form>
-          <p className="text-gray-700">
-            This site is protected by reCAPTCHA and the Google{" "}
-            <a
-              className="S_Underline-black relative inline-block underline decoration-slate-300 underline-offset-[4.5px] hover:after:left-0 hover:after:w-full"
-              href="https://policies.google.com/privacy"
-            >
-              Privacy Policy
-            </a>{" "}
-            and{" "}
-            <a
-              className="S_Underline-black relative inline-block underline decoration-slate-300 underline-offset-[4.5px] hover:after:left-0 hover:after:w-full"
-              href="https://policies.google.com/terms"
-            >
-              Terms of Service apply.
-            </a>
-          </p>
+          <div className="text-gray-700">
+            <p className="text-gray-700">
+              This site is protected by reCAPTCHA and the Google{" "}
+              <a
+                className="S_Underline-black relative inline-block underline decoration-slate-300 underline-offset-[4.5px] hover:after:left-0 hover:after:w-full"
+                href="https://policies.google.com/privacy"
+              >
+                Privacy Policy
+              </a>{" "}
+              and{" "}
+              <a
+                className="S_Underline-black relative inline-block underline decoration-slate-300 underline-offset-[4.5px] hover:after:left-0 hover:after:w-full"
+                href="https://policies.google.com/terms"
+              >
+                Terms of Service apply.
+              </a>
+            </p>
+          </div>
         </details>
       </div>
     </section>
