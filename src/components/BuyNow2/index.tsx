@@ -14,7 +14,7 @@ export default function BuyNow2(props: { data: BuyNowType }) {
 
   return (
     <section className="slide_in flex flex-wrap gap-10">
-      <div className="slider top-0 flex h-full min-w-[250px] flex-1 justify-center pt-32  mm:min-w-[350px] cc:min-w-[450px] md:sticky">
+      <div className="slider_Div top-0 mb-10 flex h-fit min-w-[250px] flex-1 justify-center pt-32 mm:min-w-[350px] cc:min-w-[450px] md:sticky lg:h-[50rem]">
         <div className="imgSidebarBtn order-last ml-3 flex flex-col gap-5 ml:ml-6 md:order-none min-[770px]:mr-2 min-[830px]:mr-6">
           {props.data.ImgSliderData.map((item, i) => {
             return (
