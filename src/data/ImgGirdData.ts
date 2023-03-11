@@ -5,6 +5,7 @@ export const ImgGridData = [
       "https://res.cloudinary.com/deh1sqok6/image/upload/v1677856364/axiom-1/ucbcuenqytv08asewqgm.webp",
     grow: true,
   },
+
   {
     name: "pullovers",
     imgUrl:
