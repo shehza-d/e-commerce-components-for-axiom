@@ -11,9 +11,8 @@ export default function BuyNow2(props: { data: BuyNowType }) {
   const [imgSrc, setImgSrc] = useState<ImgSliderType>(
     props.data.ImgSliderData[0]
   );
-
   return (
-    <section className="slide_in flex flex-wrap gap-10">
+    <section className=" flex flex-wrap gap-10">
       <div className="slider_Div top-0 mb-10 flex h-fit min-w-[250px] flex-1 justify-center pt-32 mm:min-w-[350px] cc:min-w-[450px] md:sticky lg:h-[50rem]">
         <div className="imgSidebarBtn order-last ml-3 flex flex-col gap-5 ml:ml-6 md:order-none min-[770px]:mr-2 min-[830px]:mr-6">
           {props.data.ImgSliderData.map((item, i) => {
@@ -48,12 +47,12 @@ export default function BuyNow2(props: { data: BuyNowType }) {
             );
           })}
         </div>
-        <div className="mainSlider mb-2 flex h-[22rem] w-[14rem] justify-center ml:w-[19rem] md:h-[32.1875rem] md:w-[29.5625rem] ">
+        <div className="mainSlider slider_img mb-2 flex h-[22rem] w-[14rem] justify-center overflow-hidden ml:w-[19rem] md:h-[32.1875rem] md:w-[29.5625rem] ">
           {/*h-[70%] ml:h-[80%] md:h-[110%] */}
           {/* {props.data.ImgSliderData.map((item, i) => { */}
           {imgSrc.type === "photo" ? (
             <img
-              className="cursor-zoom-in self-start"
+              className="slider_img cursor-zoom-in self-start"
               src={imgSrc.imgUrl}
               // width={70}
               // height={30}
@@ -63,8 +62,9 @@ export default function BuyNow2(props: { data: BuyNowType }) {
             <video
               // width="450"
               // height="500"
-              className="cursor-grab self-start"
+              className="slider_img cursor-grab self-start"
               muted
+              loop
               autoPlay
             >
               <source src={imgSrc.imgUrl} type="video/mp4" />
@@ -132,8 +132,8 @@ export default function BuyNow2(props: { data: BuyNowType }) {
           ))}
         </ul>
 
-        <details className="3 group border-b-2 pb-4 transition-all delay-300 duration-1000">
-          <summary className=" mt-8 flex cursor-pointer items-center justify-between py-3 transition-all delay-300 duration-1000">
+        <details className="accordion group border-b-2 pb-4 ">
+          <summary className=" mt-8 flex cursor-pointer items-center justify-between py-3 outline-none">
             <h6 className="text-sm font-semibold tracking-widest">
               SIZE CHART
             </h6>
@@ -141,8 +141,8 @@ export default function BuyNow2(props: { data: BuyNowType }) {
           </summary>
           <Table data={props.data.TableData} />
         </details>
-        <details className="group border-b-2 pb-4 ">
-          <summary className="mt-8 flex cursor-pointer items-center justify-between py-3">
+        <details className="accordion group border-b-2  pb-4 ">
+          <summary className="mt-8 flex cursor-pointer items-center justify-between py-3 outline-none">
             <h6 className="text-sm font-semibold tracking-widest">
               ASK A QUESTION
             </h6>
