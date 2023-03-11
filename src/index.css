@@ -119,11 +119,18 @@
 }
 
 /* accordion */
-.accordion[open] summary ~ *,
-.accordion[close] summary ~ * {
+.hide {
+  opacity: 0;
+  height: 0;
+  /* animation: sweep;
+  animation-duration: 1200ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1; */
+}
+.accordion {
   /* color: red; */
   animation: sweep;
-  animation-duration: 500ms;
+  animation-duration: 1200ms;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
   /* animation-fill-mode: forwards; */
@@ -131,7 +138,7 @@
 
 @keyframes sweep {
   0% {
-    opacity: 0;
+    opacity: 1;
     /* transform: translateY(-50px); */
     margin-bottom: -300px;
   }

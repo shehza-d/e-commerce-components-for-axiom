@@ -8,6 +8,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 // export default function BuyNow2({TableData,ImgSliderData,UlPoints,details,price,title}:BuyNowType) {
 export default function BuyNow2(props: { data: BuyNowType }) {
+  const [accordion, setAccordion] = useState(false);
   const [imgSrc, setImgSrc] = useState<ImgSliderType>(
     props.data.ImgSliderData[0]
   );
@@ -132,15 +133,23 @@ export default function BuyNow2(props: { data: BuyNowType }) {
           ))}
         </ul>
 
-        <details className="accordion group border-b-2 pb-4 ">
-          <summary className=" mt-8 flex cursor-pointer items-center justify-between py-3 outline-none">
-            <h6 className="text-sm font-semibold tracking-widest">
-              SIZE CHART
-            </h6>
-            <IoIosArrowDown className="transition-all duration-500 group-open:rotate-180" />
-          </summary>
+        <button
+          onClick={() => setAccordion(!accordion)}
+          className="group mt-8 flex w-full cursor-pointer items-center justify-between py-3 outline-none"
+        >
+          <h6 className="text-sm font-semibold tracking-widest">SIZE CHART</h6>
+          {/* <IoIosArrowDown className="transition-all duration-500 group-open:rotate-180" /> */}
+          <IoIosArrowDown
+            className={`transition-all duration-500
+             ${accordion ? "rotate-0" : "rotate-180"}`}
+          />
+        </button>
+        <div
+          className={`${accordion ? "hide" : "k"} accordion border-b-2 pb-4`}
+        >
           <Table data={props.data.TableData} />
-        </details>
+        </div>
+
         <details className="accordion group border-b-2  pb-4 ">
           <summary className="mt-8 flex cursor-pointer items-center justify-between py-3 outline-none">
             <h6 className="text-sm font-semibold tracking-widest">

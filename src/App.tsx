@@ -43,8 +43,8 @@ export default function App(): JSX.Element {
         {/* <div className="h-[50vh]"></div> */}
         {/* <div className="h-[50vh]"></div> */}
         <ImgGrid1 data={ImgGridData} />
-        <BuyNow2 data={BuyNowData} />
-        <ImgCards3 data={ImgCardData} />
+        {/* <BuyNow2 data={BuyNowData} /> */}
+        {/* <ImgCards3 data={ImgCardData} /> */}
         {/* <div className="h-[50vh]"></div> */}
         {/* <div className="h-[50vh]"></div> */}
       </div>
